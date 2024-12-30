@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 30b2695189edc3d5b90f1c303abb8f02d963a3a4edf2e7178b975eb417ab0ecf
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,11 +19,11 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - base58
     - netaddr
-    - python >=3.5
+    - python >={{ python_min }}
     - six
     - varint
     - idna
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/multiformats/py-multiaddr
