@@ -18,6 +18,7 @@ build:
 requirements:
   host:
     - pip
+    - setuptools
     - pytest-runner
     - python {{ python_min }}
   run:
