@@ -1,5 +1,5 @@
 {% set name = "multiaddr" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.11" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30b2695189edc3d5b90f1c303abb8f02d963a3a4edf2e7178b975eb417ab0ecf
+  sha256: e4d6598e691aca04155171dd69078a3f711342a28c785f6ba3d8ede001380f94
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,12 +22,17 @@ requirements:
     - pytest-runner
     - python {{ python_min }}
   run:
-    - base58
-    - netaddr
     - python >={{ python_min }}
-    - six
-    - varint
+    - base58
+    - dnspython >=2.7.0
     - idna
+    - netaddr
+    - psutil
+    - py-cid >=0.3.1
+    - py-multicodec >0.2.0
+    - trio-typing >=0.0.4
+    - trio >=0.26.0
+    - varint
 
 test:
   imports:
