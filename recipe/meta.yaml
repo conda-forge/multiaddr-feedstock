@@ -1,5 +1,5 @@
 {% set name = "multiaddr" %}
-{% set version = "0.0.11" %}
+{% set version = "0.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e4d6598e691aca04155171dd69078a3f711342a28c785f6ba3d8ede001380f94
+  sha256: 0a771f380adb3d5089fe386a50bcf30ef6311694d732a58c218d27ff8ba3745c
 
 build:
   number: 0
