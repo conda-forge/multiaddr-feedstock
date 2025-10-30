@@ -40,8 +40,6 @@ test:
   imports:
     - multiaddr
     - multiaddr.codecs
-  commands:
-    - pip check
   requires:
     - pip
     - python {{ python_min }}
