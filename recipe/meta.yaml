@@ -31,7 +31,7 @@ requirements:
     - py-cid >=0.6.0
     - py-multicodec >=1.1.0
     - py-multibase >=2.1.0
-    - pymultihash >=4.0.0
+    - py-multihash >=4.0.0
     - trio-typing >=0.0.4
     - trio >=0.26.0
     - varint
