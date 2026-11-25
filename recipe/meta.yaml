@@ -1,5 +1,5 @@
 {% set name = "multiaddr" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: acb6b25c332ec1b2f1f8fef8d03a8c63385d34a87d690df0f4bba43cdf6efe8d
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3efc9cac0d2859fd51b9827a75874bfa7e413d328617ef12ede3a0015ef8764e
 
 build:
   number: 0
@@ -28,10 +28,10 @@ requirements:
     - idna
     - netaddr
     - psutil
-    - py-cid >=0.3.1
-    - py-multicodec >0.2.0
-    - py-multibase
-    - pymultihash
+    - py-cid >=0.6.0
+    - py-multicodec >=1.1.0
+    - py-multibase >=2.1.0
+    - py-multihash >=4.0.0
     - trio-typing >=0.0.4
     - trio >=0.26.0
     - varint
